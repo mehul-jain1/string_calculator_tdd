@@ -1,5 +1,7 @@
 # String Calculator TDD Kata
 
+[![CI](https://github.com/mehul-jain1/string_calculator_tdd/actions/workflows/test.yml/badge.svg)](https://github.com/mehul-jain1/string_calculator_tdd/actions/workflows/test.yml)
+
 This repository contains a solution to the String Calculator TDD Kata, implemented in Ruby using Minitest. The development process strictly followed Test-Driven Development (TDD) principles, with frequent commits tracking the evolution of the code after each passed test and refactoring cycle.
 
 ## Implemented Requirements
@@ -61,3 +63,19 @@ bundle exec rake
 ```
 
 This will execute all the tests defined in the `test/` directory.
+
+### Test Output
+
+A successful test run will produce the following output:
+
+```
+Run options: --seed 4938
+
+# Running:
+
+...........
+
+Finished in 0.000446s, 24663.6760 runs/s, 29147.9808 assertions/s.
+
+11 runs, 13 assertions, 0 failures, 0 errors, 0 skips
+```
