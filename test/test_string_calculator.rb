@@ -26,4 +26,9 @@ class TestStringCalculator < Minitest::Test
     calculator = StringCalculator.new
     assert_equal 6, calculator.add("1\n2,3")
   end
+
+  def test_add_custom_delimiter
+    calculator = StringCalculator.new
+    assert_equal 3, calculator.add("//;\n1;2")
+  end
 end
