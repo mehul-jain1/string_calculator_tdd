@@ -1,7 +1,14 @@
 class StringCalculator
   def add(string_numbers)
     numbers, delimiter = parse_input(string_numbers)
-    numbers.split(delimiter).map(&:to_i).sum
+    integers = numbers.split(delimiter).map(&:to_i)
+    
+    negatives = integers.select { |n| n < 0 }
+    if negatives.any?
+      raise ArgumentError, "negatives not allowed: #{negatives.join(', ')}"
+    end
+
+    integers.sum
   end
 
   private
