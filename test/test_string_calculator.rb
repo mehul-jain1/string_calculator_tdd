@@ -37,4 +37,10 @@ class TestStringCalculator < Minitest::Test
     exception = assert_raises(ArgumentError) { calculator.add("-1,2,-3") }
     assert_equal "negatives not allowed: -1, -3", exception.message
   end
+
+  def test_add_ignores_numbers_bigger_than_1000
+    calculator = StringCalculator.new
+    assert_equal 2, calculator.add("2,1001")
+    assert_equal 1001, calculator.add("1000,1")
+  end
 end

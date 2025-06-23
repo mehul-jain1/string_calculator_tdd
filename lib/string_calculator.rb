@@ -8,7 +8,7 @@ class StringCalculator
       raise ArgumentError, "negatives not allowed: #{negatives.join(', ')}"
     end
 
-    integers.sum
+    integers.reject { |n| n > 1000 }.sum
   end
 
   private
