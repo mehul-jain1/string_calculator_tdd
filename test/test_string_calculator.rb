@@ -43,4 +43,9 @@ class TestStringCalculator < Minitest::Test
     assert_equal 2, calculator.add("2,1001")
     assert_equal 1001, calculator.add("1000,1")
   end
+
+  def test_add_custom_delimiter_any_length
+    calculator = StringCalculator.new
+    assert_equal 6, calculator.add("//[***]\n1***2***3")
+  end
 end
