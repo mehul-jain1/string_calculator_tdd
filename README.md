@@ -19,6 +19,10 @@ The calculator supports the following features:
     -   `//[**][%%]\n1**2%%3`
 6.  **Negative Numbers**: Throws an `ArgumentError` if negative numbers are provided. The exception message includes all the negative numbers found.
 7.  **Ignore Large Numbers**: Numbers greater than 1000 are ignored in the calculation.
+8.  **Multiplication Mode**: When the delimiter contains a `*` character, the calculator multiplies numbers instead of adding them.
+    -   `//[*]\n2*3` returns `6`
+    -   `//[*]\n2*3*4` returns `24`
+    -   All other rules (negatives, large numbers) still apply in multiplication mode.
 
 ## Project Structure
 
@@ -69,13 +73,13 @@ This will execute all the tests defined in the `test/` directory.
 A successful test run will produce the following output:
 
 ```
-Run options: --seed 4938
+Run options: --seed 51070
 
 # Running:
 
-...........
+...............
 
-Finished in 0.000446s, 24663.6760 runs/s, 29147.9808 assertions/s.
+Finished in 0.000802s, 18703.2419 runs/s, 23690.7731 assertions/s.
 
-11 runs, 13 assertions, 0 failures, 0 errors, 0 skips
+15 runs, 19 assertions, 0 failures, 0 errors, 0 skips
 ```
